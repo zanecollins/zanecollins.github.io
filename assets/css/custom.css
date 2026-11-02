@@ -124,3 +124,11 @@ ul.jump li {
 .spotlight .image img {
 	height: auto;
 }
+
+/* Banner image: TRAPPIST-1 artist's concept, NASA/JPL-Caltech (PIA21751, public domain) */
+#main > header,
+body.landing #page-wrapper,
+body.is-mobile.landing #banner,
+body.is-mobile.landing .wrapper.style4 {
+	background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images-assets.nasa.gov/image/PIA21751/PIA21751~orig.jpg");
+}
