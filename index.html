@@ -241,6 +241,31 @@ footer { color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--ru
 
   <article class="proj">
     <div class="body">
+      <span class="label">Observational Astrophysics · Fall 2025 · final project</span>
+      <h3>Table Mountain sky brightness</h3>
+      <ul class="pts">
+        <li>Designed a month-long observing plan to map sky brightness at Table Mountain Observatory in time and across the sky: three fixed fields (zenith and about 30° north and south, toward Los Angeles), imaged nightly in clear, g, r, and i during true night, 3 × 10 s each. Observations were taken by a classmate.</li>
+        <li>Reduced the images in Python: sigma-clipped master dark-bias and flat frames, calibration and alignment by field, and plate solving with astrometry.net.</li>
+        <li>Calibrated to mag/arcsec² with aperture photometry (aperture chosen from a growth curve at about 2× FWHM), per-field zero points from GSC 2.3 reference stars, and a sigma-clipped median sky background.</li>
+        <li>Compared the image-based results with the site’s zenith-pointing Unihedron SQM (5-minute cadence, reduced to nightly medians) and traced field-dependent offsets to observing geometry, airmass, and the SQM’s broader bandpass.</li>
+      </ul>
+      <p class="result">Median sky: 19.45 (zenith), 19.43 (north), 18.66 (south) mag/arcsec²<br>Night-to-night swings up to 1.25 mag, driven by lunar phase<br>Southward field 0.5–1.4 mag brighter than the SQM on every overlapping night</p>
+      <p class="tools"><b>Tools</b> Python (Astropy) · SAOImage DS9 · astrometry.net</p>
+    </div>
+    <div class="figs">
+      <figure>
+        <img src="img/tmo-sky-brightness.jpg" alt="Sky brightness in magnitudes per square arcsecond for three fields over November 2025, with the sky brightest at full moon and the southward field consistently brightest" loading="lazy" width="868" height="547">
+        <figcaption>Calibrated sky brightness by night for the three fields. The sky is brightest at full moon (red line), and the field toward Los Angeles is brightest throughout. The gap is a storm.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/tmo-sqm-residuals.jpg" alt="Three panels of residuals between image-based sky brightness and the Unihedron SQM for four nights, with the southward panel offset by 0.5 to 1.4 magnitudes" loading="lazy" width="1190" height="390">
+        <figcaption>Image minus SQM residuals on the four nights both were available. Negative means the image saw a brighter sky.</figcaption>
+      </figure>
+    </div>
+  </article>
+
+  <article class="proj">
+    <div class="body">
       <span class="label">Optics Lab · Feb 2026 · with Sara Morishige</span>
       <h3>Fourier transform spectrometer</h3>
       <ul class="pts">
@@ -355,11 +380,6 @@ footer { color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--ru
     <h2>More projects</h2>
   </div>
   <div class="minis">
-    <div class="mini">
-      <span class="label">Observational Astro · Fall 2025</span>
-      <h3>Table Mountain sky brightness</h3>
-      <p>Designed a month-long, three-field observing plan for the Pomona 1-meter telescope (observations taken by a classmate). Built calibration frames, plate-solved with astrometry.net, derived zero points from GSC 2.3 stars, and converted to mag/arcsec². Found sky brightness tracks lunar phase, with the zenith field darkest and the field toward Los Angeles brightest.</p>
-    </div>
     <div class="mini">
       <span class="label">Engineering Systems · Fall 2024</span>
       <h3>Underwater ROV</h3>
