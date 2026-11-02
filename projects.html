@@ -1,0 +1,281 @@
+<!DOCTYPE HTML>
+<!--
+	Spectral by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+	<head>
+		<title>Projects | Zane Collins</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="Zane Collins: physics student at Harvey Mudd College. Research and hands-on projects in spectroscopy, instrumentation, and astronomical data analysis." />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/custom.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<div id="page-wrapper">
+
+			<header id="header">
+				<h1><a href="index.html">Zane Collins</a></h1>
+				<nav id="nav">
+					<ul>
+						<li class="special">
+							<a href="#menu" class="menuToggle"><span>Menu</span></a>
+							<div id="menu">
+								<ul>
+									<li><a href="index.html">Home</a></li>
+									<li><a href="research.html">Research</a></li>
+									<li><a href="projects.html">Projects</a></li>
+									<li><a href="research.html#publications">Publications</a></li>
+									<li><a href="projects.html#skills">Skills</a></li>
+									<li><a href="index.html#cta">Contact</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			</header>
+
+			<article id="main">
+				<header>
+					<h2>Projects</h2>
+					<p>Building, aligning, and calibrating the measurement myself</p>
+				</header>
+				<section class="wrapper style5">
+					<div class="inner">
+
+						<ul class="jump">
+							<li><a href="#table-mountain">Sky brightness</a></li>
+							<li><a href="#fts">FTS</a></li>
+							<li><a href="#grating">Grating spectrometer</a></li>
+							<li><a href="#am-radio">AM radio</a></li>
+							<li><a href="#delta-scuti">&delta; Scuti</a></li>
+							<li><a href="#globular-cluster">Globular cluster</a></li>
+							<li><a href="#more">More projects</a></li>
+							<li><a href="#skills">Skills</a></li>
+						</ul>
+						<p>Course projects from Harvey Mudd and Pomona. Figures are from my lab reports.</p>
+
+						<section class="entry" id="table-mountain">
+							<h3>Table Mountain sky brightness</h3>
+							<p class="meta">Observational Astrophysics &middot; Fall 2025 &middot; final project</p>
+							<div class="row">
+								<div class="col-6 col-12-medium">
+									<ul>
+										<li>Designed a month-long observing plan to map sky brightness at Table Mountain Observatory in time and across the sky: three fixed fields (zenith and about 30&deg; north and south, toward Los Angeles), imaged nightly in clear, g, r, and i during true night, 3 &times; 10 s each. Observations were taken by a classmate.</li>
+										<li>Reduced the images in Python: sigma-clipped master dark-bias and flat frames, calibration and alignment by field, and plate solving with astrometry.net.</li>
+										<li>Calibrated to mag/arcsec&sup2; with aperture photometry (aperture chosen from a growth curve at about 2&times; FWHM), per-field zero points from GSC 2.3 reference stars, and a sigma-clipped median sky background.</li>
+										<li>Compared the image-based results with the site's zenith-pointing Unihedron SQM (5-minute cadence, reduced to nightly medians) and traced field-dependent offsets to observing geometry, airmass, and the SQM's broader bandpass.</li>
+									</ul>
+									<p class="result">Median sky: 19.45 (zenith), 19.43 (north), 18.66 (south) mag/arcsec&sup2;<br />Night-to-night swings up to 1.25 mag, driven by lunar phase<br />Southward field 0.5&ndash;1.4 mag brighter than the SQM on every overlapping night</p>
+									<p class="tools"><strong>Tools:</strong> Python (Astropy), SAOImage DS9, astrometry.net</p>
+								</div>
+								<div class="col-6 col-12-medium">
+									<div class="figure">
+								<span class="image fit"><img src="img/tmo-sky-brightness.jpg" alt="Sky brightness in magnitudes per square arcsecond for three fields over November 2025, with the sky brightest at full moon and the southward field consistently brightest" loading="lazy" width="868" height="547" /></span>
+								<p class="caption">Calibrated sky brightness by night for the three fields. The sky is brightest at full moon (red line), and the field toward Los Angeles is brightest throughout. The gap is a storm.</p>
+							</div>
+									<div class="figure">
+								<span class="image fit"><img src="img/tmo-sqm-residuals.jpg" alt="Three panels of residuals between image-based sky brightness and the Unihedron SQM for four nights, with the southward panel offset by 0.5 to 1.4 magnitudes" loading="lazy" width="1190" height="390" /></span>
+								<p class="caption">Image minus SQM residuals on the four nights both were available. Negative means the image saw a brighter sky.</p>
+							</div>
+								</div>
+							</div>
+						</section>
+
+						<section class="entry" id="fts">
+							<h3>Fourier transform spectrometer</h3>
+							<p class="meta">Optics Lab &middot; Feb 2026 &middot; with Sara Morishige</p>
+							<div class="row">
+								<div class="col-6 col-12-medium">
+									<ul>
+										<li>Built and aligned a Michelson-interferometer FTS to resolve the sodium doublet.</li>
+										<li>Fit 5 trials &times; 7 visibility minima in Python (SciPy) with a linear model and rejected a &gt;4&sigma; outlier traced to micrometer backlash.</li>
+										<li>Measured fringe visibility of the 546 nm mercury line with a photodiode, amplifier, and electrical filter to suppress 120 Hz lamp flicker, and diagnosed a drop in signal-to-noise between sessions by testing the photodiode and adjusting the detector aperture.</li>
+									</ul>
+									<p class="result">Na doublet spacing 0.593 &plusmn; 0.0004 nm, 1.2% from literature<br />Fit: reduced &chi;&sup2; = 1.69, PTE = 0.13</p>
+								</div>
+								<div class="col-6 col-12-medium">
+									<div class="figure">
+								<span class="image fit"><img src="img/fts-setup.jpg" alt="Michelson interferometer on an optical breadboard with a sodium lamp behind a black shroud" loading="lazy" width="1200" height="900" /></span>
+								<p class="caption">The FTS set up for the sodium measurement.</p>
+							</div>
+									<div class="figure">
+								<span class="image fit"><img src="img/fts-sodium-fit.jpg" alt="Average micrometer reading versus visibility minimum number, with a straight-line fit through eight points" loading="lazy" width="1200" height="800" /></span>
+								<p class="caption">Micrometer position of each visibility minimum, with linear fit.</p>
+							</div>
+								</div>
+							</div>
+						</section>
+
+						<section class="entry" id="grating">
+							<h3>Grating spectrometer calibration</h3>
+							<p class="meta">Optics Lab &middot; Apr 2026 &middot; with Jiani Fu</p>
+							<div class="row">
+								<div class="col-6 col-12-medium">
+									<ul>
+										<li>Calibrated a SPEX 500M scanning grating spectrometer with photomultiplier-tube readout against 11 mercury lines, fitting Lorentzian peak centers and a linear wavelength correction.</li>
+										<li>Flagged leftover non-linearity in the calibration (reduced &chi;&sup2; = 2.52, structured residuals) as a systematic error and proposed a broader-wavelength calibration to characterize it.</li>
+										<li>Tuned slits and focusing to record Balmer lines four orders of magnitude fainter than the 656 nm line, and resolved isotope-shifted hydrogen and deuterium lines.</li>
+									</ul>
+									<p class="result">Calibration error 0.014% (average)<br />Na spin-orbit energy 0.0021 &plusmn; 0.0002 eV<br />Rydberg constant within 0.14% (H), 0.06% (D)</p>
+									<p class="tools"><strong>Tools:</strong> Igor Pro, Lorentzian fitting, error propagation</p>
+								</div>
+								<div class="col-6 col-12-medium">
+									<div class="figure">
+								<span class="image fit"><img src="img/grating-calibration.jpg" alt="Measured versus literature wavelength for mercury lines with a linear fit, and normalized residuals above" loading="lazy" width="1029" height="1200" /></span>
+								<p class="caption">Mercury-line calibration: measured vs. literature wavelength, with residuals.</p>
+							</div>
+									<div class="figure">
+								<span class="image fit"><img src="img/balmer-h-d.jpg" alt="Two Lorentzian peaks near 656.1 and 656.3 nanometers in photomultiplier signal" loading="lazy" width="600" height="439" /></span>
+								<p class="caption">Deuterium and hydrogen Balmer lines near 656 nm, separated by the isotope shift.</p>
+							</div>
+								</div>
+							</div>
+						</section>
+
+						<section class="entry" id="am-radio">
+							<h3>AM radio receiver</h3>
+							<p class="meta">Electronics Lab &middot; Fall 2026</p>
+							<div class="row">
+								<div class="col-6 col-12-medium">
+									<ul>
+										<li>Designed and built a working AM radio from basic electronic components on a breadboard.</li>
+										<li>Used an oscilloscope, function generator, and spectrum analyzer to troubleshoot and characterize the circuit.</li>
+									</ul>
+									<p class="tools"><strong>Tools:</strong> Oscilloscope, function generator, spectrum analyzer</p>
+								</div>
+								<div class="col-6 col-12-medium">
+									<div class="figure">
+								<span class="image fit"><img src="img/am-radio.jpg" alt="Breadboarded AM radio circuit with a variable tuning capacitor on the left and a speaker on the right" loading="lazy" width="1400" height="1050" /></span>
+								<p class="caption">The finished radio on the bench: tuning capacitor at left, speaker at right.</p>
+							</div>
+								</div>
+							</div>
+						</section>
+
+						<section class="entry" id="delta-scuti">
+							<h3>CCD photometry of a &delta; Scuti variable</h3>
+							<p class="meta">Observational Astrophysics &middot; Sep 2025 &middot; with Gada Tefara</p>
+							<div class="row">
+								<div class="col-6 col-12-medium">
+									<ul>
+										<li>Observed remotely with the Pomona 1-meter telescope at Table Mountain Observatory.</li>
+										<li>Reduced 120 alternating g/r exposures: built master bias, dark, and flat frames (100 biases, 100 darks, twilight flats) with sigma-clipped combining, then calibrated and aligned the science frames.</li>
+										<li>Rejected frames corrupted by a tracking failure and chose a 13-pixel aperture from a growth curve to handle focus drift (mean SNR &asymp; 606).</li>
+										<li>Calibrated light curves against six reference stars and used the color change to show temperature, not radius, drives the brightness variation.</li>
+									</ul>
+									<p class="result">Pulsation period 78 &plusmn; 5 min</p>
+								</div>
+								<div class="col-6 col-12-medium">
+									<div class="figure">
+								<span class="image fit"><img src="img/dscuti-lightcurve.jpg" alt="Two light curves, g band and r band, showing a rise, peak, and fall in brightness over about 90 minutes" loading="lazy" width="1200" height="649" /></span>
+								<p class="caption">g- and r-band light curves of &delta; Scuti star 1362.</p>
+							</div>
+								</div>
+							</div>
+						</section>
+
+						<section class="entry" id="globular-cluster">
+							<h3>Globular cluster distance from HST archival data</h3>
+							<p class="meta">Observational Astrophysics &middot; Fall 2025</p>
+							<div class="row">
+								<div class="col-6 col-12-medium">
+									<ul>
+										<li>Built a ~150,000-source catalog from archival HST/ACS images (MAST) with DAOStarFinder, and cut crowded sources with radial and background-flux filters.</li>
+										<li>Ran aperture photometry with zero-point, aperture (encircled-energy), and extinction corrections, then median-binned the color&ndash;magnitude diagram.</li>
+										<li>Fit Dartmouth isochrones and shifted the main sequence to estimate the cluster's distance.</li>
+									</ul>
+									<p class="result">Distance 12.6 &plusmn; 0.6 kpc</p>
+									<p class="tools"><strong>Tools:</strong> Python, Astropy, photutils, DS9</p>
+								</div>
+								<div class="col-6 col-12-medium">
+									<div class="figure">
+								<span class="image fit"><img src="img/hst-cluster.jpg" alt="Grayscale HST image of a dense star cluster" loading="lazy" width="1061" height="1122" /></span>
+								<p class="caption">Archival HST/ACS image of the cluster.</p>
+							</div>
+									<div class="figure">
+								<span class="image fit"><img src="img/cmd-isochrones.jpg" alt="Color-magnitude diagram with orange data points along a curved main sequence and green isochrone curves" loading="lazy" width="1200" height="646" /></span>
+								<p class="caption">Final color&ndash;magnitude diagram with isochrones overlaid.</p>
+							</div>
+								</div>
+							</div>
+						</section>
+
+						<section class="entry" id="more">
+							<h3>More projects</h3>
+							<div class="row">
+								<div class="col-6 col-12-small">
+									<h4>Underwater ROV</h4>
+									<p class="meta">Engineering Systems &middot; Fall 2024</p>
+									<p>Wrote LabVIEW code to read, log, and display live depth data from the ROV's pressure sensor. The ROV was deployed in a lake.</p>
+								</div>
+								<div class="col-6 col-12-small">
+									<h4>Astrometry of moving objects</h4>
+									<p class="meta">Observational Astrophysics &middot; Sep 2025</p>
+									<p>Ran the 1-meter telescope, plate-solved frames with astrometry.net, and used RA/Dec time series in Python to classify one target as a Sun-orbiting ecliptic object and two as Earth-orbiting satellites.</p>
+								</div>
+								<div class="col-6 col-12-small">
+									<h4>Double pendulum dynamics</h4>
+									<p class="meta">Theoretical Mechanics &middot; Dec 2025</p>
+									<p>Derived the coupled equations of motion with Lagrangian mechanics and solved them numerically in Python with ODEint, showing the transition from harmonic to chaotic motion.</p>
+								</div>
+								<div class="col-6 col-12-small">
+									<h4>Geometric optics imaging</h4>
+									<p class="meta">Optics Lab &middot; Jan 2026</p>
+									<p>Replaced a cardboard screen with a camera on a translation stage to improve focus detection, calibrated its sensor offset, and used residual analysis to identify unmodeled systematic error.</p>
+								</div>
+							</div>
+						</section>
+
+						<section id="skills">
+							<h3>Skills</h3>
+							<div class="row">
+								<div class="col-6 col-12-small">
+									<h4>Programming and software</h4>
+									<p>Python (NumPy, SciPy, Astropy, Matplotlib, Pandas, ODEint), HITRAN HAPI, Jupyter, Igor Pro, LabVIEW, Unix, awk, LaTeX</p>
+									<h4>Modeling codes</h4>
+									<p>petitRADTRANS, LavAtmos, FastChem</p>
+								</div>
+								<div class="col-6 col-12-small">
+									<h4>Lab equipment</h4>
+									<p>Lock-in amplifier, scanning grating spectrometer, photomultiplier tube, Michelson interferometer, photodiode and amplifier, oscilloscope, function generator, spectrum analyzer, pressure sensor, 1-meter telescope</p>
+									<h4>Methods</h4>
+									<p>CCD reduction (bias, dark, flat), aperture photometry, plate solving, photometric calibration, spectroscopy, cross-correlation and log-likelihood analysis, numerical simulation, uncertainty analysis</p>
+								</div>
+							</div>
+							<p>Teaching: physics and astrophysics lab TA and course grader at Harvey Mudd and Pomona Colleges, Jan 2025 to present.</p>
+						</section>
+
+					</div>
+				</section>
+			</article>
+
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="mailto:zacollins@g.hmc.edu" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					<li><a href="https://www.linkedin.com/in/zanebcollins" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://github.com/zanecollins" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Zane Collins</li>
+					<li>Updated November 2026</li>
+					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</footer>
+
+		</div>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

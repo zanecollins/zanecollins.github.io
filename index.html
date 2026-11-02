@@ -1,451 +1,189 @@
-<!doctype html>
+<!DOCTYPE HTML>
+<!--
+	Spectral by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Zane Collins Portfolio</title>
-<meta name="description" content="Research and hands-on projects in spectroscopy, instrumentation, and astronomical data analysis.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Public+Sans:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap">
-<style>
-/* Layout: single reading column; project entries pair text with a lab figure, stacking on phones. Accent = sodium-lamp amber (589 nm). */
-:root {
-  --paper: #f4f6f7;
-  --surface: #ffffff;
-  --ink: #12202b;
-  --muted: #55636e;
-  --rule: #d6dde2;
-  --sodium: #a35f00;
-  --sodium-soft: #fbedd6;
-  --display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", sans-serif;
-  --body: "Public Sans", "Helvetica Neue", Arial, sans-serif;
-  --mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --paper: #0d151b; --surface: #15212a; --ink: #e6ecef; --muted: #9aa8b2;
-    --rule: #2a3843; --sodium: #ffb54a; --sodium-soft: #3a2a12; color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
-  --paper: #0d151b; --surface: #15212a; --ink: #e6ecef; --muted: #9aa8b2;
-  --rule: #2a3843; --sodium: #ffb54a; --sodium-soft: #3a2a12; color-scheme: dark;
-}
-*, *::before, *::after { box-sizing: border-box; }
-img { max-width: 100%; }
-html { color-scheme: light; }
-body {
-  margin: 0;
-  background: var(--paper); color: var(--ink);
-  font: 400 1rem/1.6 var(--body);
-  padding-left: max(16px, env(safe-area-inset-left, 0px));
-  padding-right: max(16px, env(safe-area-inset-right, 0px));
-}
-.wrap { max-width: 980px; margin: 0 auto; padding-block: 56px 72px; display: grid; gap: 64px; }
-h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; line-height: 1.15; }
-h1 { font-size: clamp(2.4rem, 6vw, 3.6rem); font-weight: 700; letter-spacing: -0.02em; }
-h2 { font-size: 1.6rem; font-weight: 700; }
-h3 { font-size: 1.2rem; font-weight: 500; }
-p { margin: 0; }
-a { color: var(--sodium); text-underline-offset: 3px; }
-a:focus-visible, button:focus-visible { outline: 2px solid var(--sodium); outline-offset: 2px; }
-.label { font: 500 0.72rem/1.4 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+	<head>
+		<title>Zane Collins</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="Zane Collins: physics student at Harvey Mudd College. Research and hands-on projects in spectroscopy, instrumentation, and astronomical data analysis." />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/custom.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="landing is-preload">
 
-/* Header */
-header { display: grid; gap: 20px; }
-.lede { font-size: 1.15rem; max-width: 62ch; color: var(--ink); }
-.spectrum { display: flex; align-items: center; gap: 12px; color: var(--muted); font: 400 0.78rem var(--mono); }
-.spectrum svg { width: 180px; height: 22px; flex: none; }
-.contact { display: flex; flex-wrap: wrap; gap: 10px 22px; align-items: center; font-size: 0.95rem; }
-.contact .email { font-family: var(--mono); font-size: 0.9rem; user-select: all; }
-.copy { font: 500 0.75rem var(--mono); border: 1px solid var(--rule); background: var(--surface); color: var(--ink); border-radius: 4px; padding: 3px 8px; cursor: pointer; }
-.facts { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 0; padding: 0; }
-.facts li { font: 400 0.8rem var(--mono); padding: 4px 10px; border: 1px solid var(--rule); border-radius: 999px; background: var(--surface); }
-nav { display: flex; flex-wrap: wrap; gap: 6px 20px; border-top: 1px solid var(--rule); padding-top: 14px; font-size: 0.95rem; }
-nav a { color: var(--ink); text-decoration: none; }
-nav a:hover { color: var(--sodium); }
+		<div id="page-wrapper">
 
-/* Sections */
-section { display: grid; gap: 28px; }
-.sec-head { display: grid; gap: 6px; border-bottom: 2px solid var(--ink); padding-bottom: 10px; }
-.sec-head p { color: var(--muted); max-width: 65ch; }
+			<header id="header" class="alt">
+				<h1><a href="index.html">Zane Collins</a></h1>
+				<nav id="nav">
+					<ul>
+						<li class="special">
+							<a href="#menu" class="menuToggle"><span>Menu</span></a>
+							<div id="menu">
+								<ul>
+									<li><a href="index.html">Home</a></li>
+									<li><a href="research.html">Research</a></li>
+									<li><a href="projects.html">Projects</a></li>
+									<li><a href="research.html#publications">Publications</a></li>
+									<li><a href="projects.html#skills">Skills</a></li>
+									<li><a href="index.html#cta">Contact</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			</header>
 
-/* Research list */
-.research { display: grid; gap: 0; }
-.role { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 8px 28px; padding-block: 22px; border-bottom: 1px solid var(--rule); }
-.role:last-child { border-bottom: 0; }
-.role .when { font: 400 0.82rem/1.5 var(--mono); color: var(--muted); padding-top: 3px; }
-.role .body { display: grid; gap: 8px; min-width: 0; }
-.role .where { color: var(--muted); font-size: 0.92rem; }
-ul.pts { margin: 0; padding-left: 1.1em; display: grid; gap: 4px; }
-ul.pts li::marker { color: var(--sodium); }
-.tools { font: 400 0.8rem/1.6 var(--mono); color: var(--muted); }
-.tools b { color: var(--ink); font-weight: 500; }
-.out { font-size: 0.92rem; background: var(--sodium-soft); padding: 8px 12px; border-radius: 4px; }
+			<section id="banner">
+				<div class="inner">
+					<h2>Zane Collins</h2>
+					<p>Physics (astrophysics focus)<br />
+					Harvey Mudd College, class of 2027</p>
+					<p class="facts">Spectroscopy &middot; Instrumentation &middot; Astronomical data</p>
+				</div>
+				<a href="#one" class="more scrolly">Learn More</a>
+			</section>
 
-/* Projects with figures */
-.proj { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px; align-items: start; padding-block: 28px; border-bottom: 1px solid var(--rule); }
-.proj:last-child { border-bottom: 0; }
-.proj .body { display: grid; gap: 10px; min-width: 0; }
-.figs { display: grid; gap: 14px; min-width: 0; }
-.figs.two { grid-template-columns: 1fr 1fr; }
-figure { margin: 0; display: grid; gap: 6px; }
-figure img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 3px; background: #fff; }
-figcaption { font-size: 0.8rem; line-height: 1.45; color: var(--muted); }
-.talk { max-width: 560px; margin-top: 6px; }
-.result { font: 500 0.85rem/1.5 var(--mono); color: var(--ink); border-left: 3px solid var(--sodium); padding-left: 10px; }
+			<section id="one" class="wrapper style1 special">
+				<div class="inner">
+					<header class="major">
+						<h2>What I do</h2>
+						<p>I build and calibrate spectroscopic and imaging measurements, then analyze the data with careful uncertainty analysis. My research at MIT models exoplanet and Venus atmospheres, and my lab work spans spectrometers, telescopes, and circuits. I'm looking for full-time instrumentation, space science, and scientific computing roles starting summer 2027.</p>
+					</header>
+					<ul class="icons major">
+						<li><span class="icon solid fa-satellite major style1"><span class="label">Space science</span></span></li>
+						<li><span class="icon solid fa-microscope major style2"><span class="label">Instrumentation</span></span></li>
+						<li><span class="icon solid fa-code major style3"><span class="label">Scientific computing</span></span></li>
+					</ul>
+				</div>
+			</section>
 
-/* Smaller projects */
-.minis { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
-.mini { background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: 18px; display: grid; gap: 8px; align-content: start; min-width: 0; }
-.mini p { font-size: 0.93rem; }
+			<section id="two" class="wrapper alt style2">
+				<section class="spotlight">
+					<div class="image"><img src="img/aastcs-talk.jpg" alt="Zane Collins at a podium beside a projected slide titled Solar Gravitational Lens Extreme Spectral Resolution" /></div>
+					<div class="content">
+						<p class="meta">MIT research &middot; 2025 to present</p>
+						<h2>Solar Gravitational Lens spectroscopy</h2>
+						<p>I built a Python pipeline, largely from first principles, that models high-resolution transmission spectra of Earth-like exoplanets amplified by the Sun's gravitational lens, and used it to find how well biosignatures could be detected at different spatial and spectral resolutions. I presented the work as a first-author poster at AASTCS 11: Exoplanet Atmospheres (2026).</p>
+						<ul class="actions">
+							<li><a href="research.html#sgl" class="button">Read more</a></li>
+						</ul>
+					</div>
+				</section>
+				<section class="spotlight">
+					<div class="image plot"><img src="img/tmo-sky-brightness.jpg" alt="Sky brightness for three fields over November 2025, brightest at full moon, with the southward field consistently brightest" /></div>
+					<div class="content">
+						<p class="meta">Observational astrophysics &middot; Fall 2025</p>
+						<h2>Table Mountain sky brightness</h2>
+						<p>I designed a month-long observing plan for the Pomona 1-meter telescope and reduced the images to calibrated sky brightness in three directions. The sky tracks the Moon night to night, and the field toward Los Angeles is about 0.8 mag/arcsec² brighter than the zenith.</p>
+						<ul class="actions">
+							<li><a href="projects.html#table-mountain" class="button">Read more</a></li>
+						</ul>
+					</div>
+				</section>
+				<section class="spotlight">
+					<div class="image"><img src="img/fts-setup.jpg" alt="Michelson interferometer on an optical breadboard with a sodium lamp behind a black shroud" /></div>
+					<div class="content">
+						<p class="meta">Optics lab &middot; 2026</p>
+						<h2>Building and calibrating spectrometers</h2>
+						<p>I aligned a Michelson-interferometer Fourier transform spectrometer that resolved the sodium doublet, and calibrated a scanning grating spectrometer against 11 mercury lines to an average error of 0.014%.</p>
+						<ul class="actions">
+							<li><a href="projects.html#fts" class="button">Read more</a></li>
+						</ul>
+					</div>
+				</section>
+				<section class="spotlight">
+					<div class="image"><img src="img/am-radio.jpg" alt="Breadboarded AM radio circuit with a variable tuning capacitor on the left and a speaker on the right" /></div>
+					<div class="content">
+						<p class="meta">Electronics lab &middot; Fall 2026</p>
+						<h2>AM radio receiver</h2>
+						<p>I designed and built a working AM radio from basic components, then used an oscilloscope, function generator, and spectrum analyzer to troubleshoot and characterize the circuit.</p>
+						<ul class="actions">
+							<li><a href="projects.html#am-radio" class="button">Read more</a></li>
+						</ul>
+					</div>
+				</section>
+			</section>
 
-/* Publications & skills */
-.pubs { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; }
-.pubs li { display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 4px 24px; }
-.pubs .tag { font: 500 0.75rem/1.6 var(--mono); color: var(--sodium); text-transform: uppercase; letter-spacing: 0.06em; padding-top: 2px; }
-.pubs em { font-style: italic; }
-.skills { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 32px; }
-.skills div { display: grid; gap: 6px; min-width: 0; }
-.skills p { font-size: 0.95rem; }
-footer { color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--rule); padding-top: 16px; }
+			<section id="three" class="wrapper style3 special">
+				<div class="inner">
+					<header class="major">
+						<h2>More research and projects</h2>
+						<p>Exoplanet and Venus atmospheres at MIT, a peer-reviewed algorithm paper, and hands-on work from telescope data to underwater robots.</p>
+					</header>
+					<ul class="features">
+						<li class="icon solid fa-globe-americas">
+							<h3>Magma ocean atmospheres</h3>
+							<p>Coupling LavAtmos, FastChem, and petitRADTRANS to connect magma ocean interiors to observable spectra. Contributing author on a JWST Cycle 6 proposal.</p>
+						</li>
+						<li class="icon solid fa-cloud-sun">
+							<h3>Venus UV experiment</h3>
+							<p>Designed a UV phase-modulation experiment with a lock-in amplifier for in-situ measurement of the Venusian atmosphere.</p>
+						</li>
+						<li class="icon solid fa-project-diagram">
+							<h3>Robust matrix factorization</h3>
+							<p>Quantile-based update rules for corruption-robust NMF. Peer-reviewed paper at SampTA 2025.</p>
+						</li>
+						<li class="icon solid fa-star">
+							<h3>Globular cluster distance</h3>
+							<p>Built a ~150,000-source catalog from archival HST images and fit isochrones to estimate a distance of 12.6 &plusmn; 0.6 kpc.</p>
+						</li>
+						<li class="icon solid fa-wave-square">
+							<h3>Variable star photometry</h3>
+							<p>Reduced 120 CCD exposures from the 1-meter telescope and measured a &delta; Scuti pulsation period of 78 &plusmn; 5 minutes.</p>
+						</li>
+						<li class="icon solid fa-water">
+							<h3>Underwater ROV</h3>
+							<p>Wrote LabVIEW code to read, log, and display live depth data from the ROV's pressure sensor, then deployed it in a lake.</p>
+						</li>
+					</ul>
+					<ul class="actions special">
+						<li><a href="research.html" class="button">All research</a></li>
+						<li><a href="projects.html" class="button">All projects</a></li>
+					</ul>
+				</div>
+			</section>
 
-@media (max-width: 760px) {
-  .wrap { padding-block: 32px 48px; gap: 48px; }
-  .role, .proj, .pubs li { grid-template-columns: minmax(0, 1fr); }
-  .minis, .skills { grid-template-columns: minmax(0, 1fr); }
-}
-@media (max-width: 420px) { .figs.two { grid-template-columns: minmax(0, 1fr); } }
-</style>
+			<section id="cta" class="wrapper style4">
+				<div class="inner">
+					<header>
+						<h2>Get in touch</h2>
+						<p>Email <strong>zacollins@g.hmc.edu</strong> or find me on LinkedIn. I'm a U.S. citizen graduating in May 2027.</p>
+					</header>
+					<ul class="actions stacked">
+						<li><a href="mailto:zacollins@g.hmc.edu" class="button fit primary">Email me</a></li>
+						<li><a href="https://www.linkedin.com/in/zanebcollins" class="button fit">LinkedIn</a></li>
+					</ul>
+				</div>
+			</section>
 
-</head>
-<body>
-<div class="wrap">
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="mailto:zacollins@g.hmc.edu" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					<li><a href="https://www.linkedin.com/in/zanebcollins" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://github.com/zanecollins" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Zane Collins</li>
+					<li>Updated November 2026</li>
+					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</footer>
 
-<header>
-  <div class="spectrum" aria-hidden="true">
-    <svg viewBox="0 0 180 22"><line x1="0" y1="18" x2="180" y2="18" stroke="currentColor" stroke-width="1"/><path d="M0 18 L72 18 Q78 18 80 4 Q82 18 88 18 L96 18 Q101 18 103 9 Q105 18 110 18 L180 18" fill="none" stroke="var(--sodium)" stroke-width="1.6"/></svg>
-    <span>Na D doublet · 589.0 / 589.6 nm</span>
-  </div>
-  <h1>Zane Collins</h1>
-  <p class="lede">Physics student (astrophysics focus) at Harvey Mudd College. I build and calibrate spectroscopic and imaging measurements, then analyze the data with careful uncertainty analysis. Looking for full-time instrumentation, space science, and scientific computing roles starting summer 2027.</p>
-  <ul class="facts">
-    <li>B.S. Physics · Harvey Mudd · May 2027</li>
-    <li>MIT exoplanet &amp; Venus research, 2025–2026</li>
-    <li>Peer-reviewed paper, SampTA 2025</li>
-    <li>U.S. citizen</li>
-  </ul>
-  <div class="contact">
-    <span class="email" id="email">zacollins@g.hmc.edu</span>
-    <button class="copy" id="copy-email" type="button">Copy email</button>
-    <a href="https://www.linkedin.com/in/zanebcollins" target="_blank" rel="noopener">LinkedIn</a>
-  </div>
-  <nav aria-label="Sections">
-    <a href="#research">Research</a>
-    <a href="#lab-projects">Lab &amp; instrument projects</a>
-    <a href="#more-projects">More projects</a>
-    <a href="#publications">Publications</a>
-    <a href="#skills">Skills</a>
-  </nav>
-</header>
+		</div>
 
-<section id="research">
-  <div class="sec-head">
-    <span class="label">Research</span>
-    <h2>Research experience</h2>
-  </div>
-  <div class="research">
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 
-    <article class="role">
-      <div class="when">May 2025 – present<br>MIT · Cambridge, MA</div>
-      <div class="body">
-        <h3>Solar Gravitational Lens biosignature spectroscopy</h3>
-        <p class="where">Research Assistant, Seager group · with A. Glidden, S. Barat, S. Turyshev</p>
-        <ul class="pts">
-          <li>Built a Python spectroscopic modeling pipeline largely from first principles to model high-resolution transmission spectra of Earth-like exoplanets amplified by the Solar Gravitational Lens.</li>
-          <li>Learned the HITRAN API from scratch for high-resolution molecular line data, building from test scripts to full models, and used colorednoise to simulate noise in synthetic observations.</li>
-          <li>Quantified biosignature detectability limits as a function of spatial resolution, spectral resolution, and signal-to-noise, using cross-correlation and log-likelihood analysis.</li>
-        </ul>
-        <p class="tools"><b>Tools</b> Python · NumPy · SciPy · HITRAN HAPI · colorednoise</p>
-        <p>At JWST-like resolving power (R ~ 10³), overlapping features from different molecules blend together and make trace-gas biosignatures hard to identify. The SGL’s photon amplification (~10¹¹ at ~1 μm) can instead be spent on spectroscopy, reaching R ~ 10⁶–10⁷, with practical limits set by the solar-corona background, the SGL point-spread function, and reconstruction losses.</p>
-        <p class="out">First-author poster, AASTCS 11: Exoplanet Atmospheres (2026). First-author manuscript in preparation.</p>
-        <figure class="talk">
-          <img src="img/aastcs-talk.jpg" alt="Zane Collins at a podium beside a projected slide titled Solar Gravitational Lens Extreme Spectral Resolution" loading="lazy" width="1024" height="583">
-          <figcaption>Presenting the SGL work at AASTCS 11: Exoplanet Atmospheres (2026).</figcaption>
-        </figure>
-      </div>
-    </article>
-
-    <article class="role">
-      <div class="when">May 2026 – present<br>MIT · Cambridge, MA</div>
-      <div class="body">
-        <h3>Magma oceans and exoplanet atmospheres</h3>
-        <p class="where">Research Assistant, Seager group</p>
-        <ul class="pts">
-          <li>Coupling LavAtmos (melt–vapor chemistry), FastChem (gas-phase equilibrium chemistry), and petitRADTRANS (radiative transfer) to connect magma ocean interiors to observable atmospheric spectra.</li>
-          <li>Evaluating atmospheric tracers as diagnostics of exoplanet interiors.</li>
-        </ul>
-        <p class="tools"><b>Tools</b> petitRADTRANS · LavAtmos · FastChem · Python</p>
-        <p class="out">Contributing author on a JWST Cycle 6 proposal for a young sub-Neptune.</p>
-      </div>
-    </article>
-
-    <article class="role">
-      <div class="when">Jan 2025 – Aug 2026<br>MIT · Cambridge, MA</div>
-      <div class="body">
-        <h3>Morning Star Missions to Venus</h3>
-        <p class="where">Research Assistant · advisors J. Petkowski, S. Seager</p>
-        <ul class="pts">
-          <li>Designed a UV phase-modulation experiment, using a lock-in amplifier, to test the feasibility of in-situ photonic measurement of the Venusian atmosphere.</li>
-          <li>Spectroscopically characterized molecules and curated a spectral library of 10 molecule classes relevant to Venus’s atmosphere and to the search for organic compounds.</li>
-          <li>Presented findings to collaborators at the University of Bern and mentored two high school students on the spectral library.</li>
-        </ul>
-      </div>
-    </article>
-
-    <article class="role">
-      <div class="when">Aug – Dec 2024<br>Harvey Mudd College</div>
-      <div class="body">
-        <h3>Corruption-robust non-negative matrix factorization</h3>
-        <p class="where">Undergraduate Research Assistant · advisor J. Haddock</p>
-        <ul class="pts">
-          <li>Developed quantile-based multiplicative update rules for NMF that resist sparse corruption, working with two other undergraduates on the algorithm, simulations, and paper.</li>
-          <li>Analyzed convergence behavior under sparse noise.</li>
-        </ul>
-        <p class="out">Peer-reviewed conference paper, SampTA 2025.</p>
-      </div>
-    </article>
-
-    <article class="role">
-      <div class="when">Jun – Aug 2024<br>Univ. of San Diego</div>
-      <div class="body">
-        <h3>STAR program: modeling with experimental mathematics</h3>
-        <p class="where">Undergraduate Student Researcher · advisor J. Friedman</p>
-        <ul class="pts">
-          <li>Used differential evolution to fit piecewise model functions to data, with confidence and uncertainty estimates.</li>
-          <li>Presented at the USD Fall Research Colloquium (Sep 2024).</li>
-        </ul>
-      </div>
-    </article>
-
-  </div>
-</section>
-
-<section id="lab-projects">
-  <div class="sec-head">
-    <span class="label">Hands-on</span>
-    <h2>Lab and instrument projects</h2>
-    <p>Course projects where I built, aligned, or calibrated the measurement myself. Figures are from my lab reports.</p>
-  </div>
-
-  <article class="proj">
-    <div class="body">
-      <span class="label">Observational Astrophysics · Fall 2025 · final project</span>
-      <h3>Table Mountain sky brightness</h3>
-      <ul class="pts">
-        <li>Designed a month-long observing plan to map sky brightness at Table Mountain Observatory in time and across the sky: three fixed fields (zenith and about 30° north and south, toward Los Angeles), imaged nightly in clear, g, r, and i during true night, 3 × 10 s each. Observations were taken by a classmate.</li>
-        <li>Reduced the images in Python: sigma-clipped master dark-bias and flat frames, calibration and alignment by field, and plate solving with astrometry.net.</li>
-        <li>Calibrated to mag/arcsec² with aperture photometry (aperture chosen from a growth curve at about 2× FWHM), per-field zero points from GSC 2.3 reference stars, and a sigma-clipped median sky background.</li>
-        <li>Compared the image-based results with the site’s zenith-pointing Unihedron SQM (5-minute cadence, reduced to nightly medians) and traced field-dependent offsets to observing geometry, airmass, and the SQM’s broader bandpass.</li>
-      </ul>
-      <p class="result">Median sky: 19.45 (zenith), 19.43 (north), 18.66 (south) mag/arcsec²<br>Night-to-night swings up to 1.25 mag, driven by lunar phase<br>Southward field 0.5–1.4 mag brighter than the SQM on every overlapping night</p>
-      <p class="tools"><b>Tools</b> Python (Astropy) · SAOImage DS9 · astrometry.net</p>
-    </div>
-    <div class="figs">
-      <figure>
-        <img src="img/tmo-sky-brightness.jpg" alt="Sky brightness in magnitudes per square arcsecond for three fields over November 2025, with the sky brightest at full moon and the southward field consistently brightest" loading="lazy" width="868" height="547">
-        <figcaption>Calibrated sky brightness by night for the three fields. The sky is brightest at full moon (red line), and the field toward Los Angeles is brightest throughout. The gap is a storm.</figcaption>
-      </figure>
-      <figure>
-        <img src="img/tmo-sqm-residuals.jpg" alt="Three panels of residuals between image-based sky brightness and the Unihedron SQM for four nights, with the southward panel offset by 0.5 to 1.4 magnitudes" loading="lazy" width="1190" height="390">
-        <figcaption>Image minus SQM residuals on the four nights both were available. Negative means the image saw a brighter sky.</figcaption>
-      </figure>
-    </div>
-  </article>
-
-  <article class="proj">
-    <div class="body">
-      <span class="label">Optics Lab · Feb 2026 · with Sara Morishige</span>
-      <h3>Fourier transform spectrometer</h3>
-      <ul class="pts">
-        <li>Built and aligned a Michelson-interferometer FTS to resolve the sodium doublet.</li>
-        <li>Fit 5 trials × 7 visibility minima in Python (SciPy) with a linear model and rejected a &gt;4σ outlier traced to micrometer backlash.</li>
-        <li>Measured fringe visibility of the 546 nm mercury line with a photodiode, amplifier, and electrical filter to suppress 120 Hz lamp flicker, and diagnosed a drop in signal-to-noise between sessions by testing the photodiode and adjusting the detector aperture.</li>
-      </ul>
-      <p class="result">Na doublet spacing 0.593 ± 0.0004 nm, 1.2% from literature<br>Fit: reduced χ² = 1.69, PTE = 0.13</p>
-    </div>
-    <div class="figs">
-      <figure>
-        <img src="img/fts-setup.jpg" alt="Michelson interferometer on an optical breadboard with a sodium lamp behind a black shroud" loading="lazy" width="1200" height="900">
-        <figcaption>The FTS set up for the sodium measurement.</figcaption>
-      </figure>
-      <figure>
-        <img src="img/fts-sodium-fit.jpg" alt="Average micrometer reading versus visibility minimum number, with a straight-line fit through eight points" loading="lazy" width="1200" height="800">
-        <figcaption>Micrometer position of each visibility minimum, with linear fit.</figcaption>
-      </figure>
-    </div>
-  </article>
-
-  <article class="proj">
-    <div class="body">
-      <span class="label">Optics Lab · Apr 2026 · with Jiani Fu</span>
-      <h3>Grating spectrometer calibration</h3>
-      <ul class="pts">
-        <li>Calibrated a SPEX 500M scanning grating spectrometer with photomultiplier-tube readout against 11 mercury lines, fitting Lorentzian peak centers and a linear wavelength correction.</li>
-        <li>Flagged leftover non-linearity in the calibration (reduced χ² = 2.52, structured residuals) as a systematic error and proposed a broader-wavelength calibration to characterize it.</li>
-        <li>Tuned slits and focusing to record Balmer lines four orders of magnitude fainter than the 656 nm line, and resolved isotope-shifted hydrogen and deuterium lines.</li>
-      </ul>
-      <p class="result">Calibration error 0.014% (average)<br>Na spin-orbit energy 0.0021 ± 0.0002 eV<br>Rydberg constant within 0.14% (H), 0.06% (D)</p>
-      <p class="tools"><b>Tools</b> Igor Pro · Lorentzian fitting · error propagation</p>
-    </div>
-    <div class="figs two">
-      <figure>
-        <img src="img/grating-calibration.jpg" alt="Measured versus literature wavelength for mercury lines with a linear fit, and normalized residuals above" loading="lazy" width="1029" height="1200">
-        <figcaption>Mercury-line calibration: measured vs. literature wavelength, with residuals.</figcaption>
-      </figure>
-      <figure>
-        <img src="img/balmer-h-d.jpg" alt="Two Lorentzian peaks near 656.1 and 656.3 nanometers in photomultiplier signal" loading="lazy" width="600" height="439">
-        <figcaption>Deuterium and hydrogen Balmer lines near 656 nm, separated by the isotope shift.</figcaption>
-      </figure>
-    </div>
-  </article>
-
-  <article class="proj">
-    <div class="body">
-      <span class="label">Observational Astrophysics · Sep 2025 · with Gada Tefara</span>
-      <h3>CCD photometry of a δ Scuti variable</h3>
-      <ul class="pts">
-        <li>Observed remotely with the Pomona 1-meter telescope at Table Mountain Observatory.</li>
-        <li>Reduced 120 alternating g/r exposures: built master bias, dark, and flat frames (100 biases, 100 darks, twilight flats) with sigma-clipped combining, then calibrated and aligned the science frames.</li>
-        <li>Rejected frames corrupted by a tracking failure and chose a 13-pixel aperture from a growth curve to handle focus drift (mean SNR ≈ 606).</li>
-        <li>Calibrated light curves against six reference stars and used the color change to show temperature, not radius, drives the brightness variation.</li>
-      </ul>
-      <p class="result">Pulsation period 78 ± 5 min</p>
-    </div>
-    <div class="figs">
-      <figure>
-        <img src="img/dscuti-lightcurve.jpg" alt="Two light curves, g band and r band, showing a rise, peak, and fall in brightness over about 90 minutes" loading="lazy" width="1200" height="649">
-        <figcaption>g- and r-band light curves of δ Scuti star 1362.</figcaption>
-      </figure>
-    </div>
-  </article>
-
-  <article class="proj">
-    <div class="body">
-      <span class="label">Observational Astrophysics · Fall 2025</span>
-      <h3>Globular cluster distance from HST archival data</h3>
-      <ul class="pts">
-        <li>Built a ~150,000-source catalog from archival HST/ACS images (MAST) with DAOStarFinder, and cut crowded sources with radial and background-flux filters.</li>
-        <li>Ran aperture photometry with zero-point, aperture (encircled-energy), and extinction corrections, then median-binned the color–magnitude diagram.</li>
-        <li>Fit Dartmouth isochrones and shifted the main sequence to estimate the cluster’s distance.</li>
-      </ul>
-      <p class="result">Distance 12.6 ± 0.6 kpc</p>
-      <p class="tools"><b>Tools</b> Python · Astropy · photutils · DS9</p>
-    </div>
-    <div class="figs two">
-      <figure>
-        <img src="img/hst-cluster.jpg" alt="Grayscale HST image of a dense star cluster" loading="lazy" width="1061" height="1122">
-        <figcaption>Archival HST/ACS image of the cluster.</figcaption>
-      </figure>
-      <figure>
-        <img src="img/cmd-isochrones.jpg" alt="Color-magnitude diagram with orange data points along a curved main sequence and green isochrone curves" loading="lazy" width="1200" height="646">
-        <figcaption>Final color–magnitude diagram with isochrones overlaid.</figcaption>
-      </figure>
-    </div>
-  </article>
-
-  <article class="proj">
-    <div class="body">
-      <span class="label">Electronics Lab · Fall 2026</span>
-      <h3>AM radio receiver</h3>
-      <ul class="pts">
-        <li>Designed and built a working AM radio from basic electronic components on a breadboard.</li>
-        <li>Used an oscilloscope, function generator, and spectrum analyzer to troubleshoot and characterize the circuit.</li>
-      </ul>
-      <p class="tools"><b>Tools</b> Oscilloscope · function generator · spectrum analyzer</p>
-    </div>
-    <div class="figs">
-      <figure>
-        <img src="img/am-radio.jpg" alt="Breadboarded AM radio circuit with a variable tuning capacitor on the left and a speaker on the right" loading="lazy" width="1400" height="1050">
-        <figcaption>The finished radio on the bench: tuning capacitor at left, speaker at right.</figcaption>
-      </figure>
-    </div>
-  </article>
-</section>
-
-<section id="more-projects">
-  <div class="sec-head">
-    <span class="label">Also built</span>
-    <h2>More projects</h2>
-  </div>
-  <div class="minis">
-    <div class="mini">
-      <span class="label">Engineering Systems · Fall 2024</span>
-      <h3>Underwater ROV</h3>
-      <p>Wrote LabVIEW code to read, log, and display live depth data from the ROV’s pressure sensor. The ROV was deployed in a lake.</p>
-    </div>
-    <div class="mini">
-      <span class="label">Observational Astro · Sep 2025</span>
-      <h3>Astrometry of moving objects</h3>
-      <p>Ran the 1-meter telescope, plate-solved frames with astrometry.net, and used RA/Dec time series in Python to classify one target as a Sun-orbiting ecliptic object and two as Earth-orbiting satellites.</p>
-    </div>
-    <div class="mini">
-      <span class="label">Theoretical Mechanics · Dec 2025</span>
-      <h3>Double pendulum dynamics</h3>
-      <p>Derived the coupled equations of motion with Lagrangian mechanics and solved them numerically in Python with ODEint, showing the transition from harmonic to chaotic motion.</p>
-    </div>
-    <div class="mini">
-      <span class="label">Optics Lab · Jan 2026</span>
-      <h3>Geometric optics imaging</h3>
-      <p>Replaced a cardboard screen with a camera on a translation stage to improve focus detection, calibrated its sensor offset, and used residual analysis to identify unmodeled systematic error.</p>
-    </div>
-  </div>
-</section>
-
-<section id="publications">
-  <div class="sec-head">
-    <span class="label">Writing</span>
-    <h2>Publications and presentations</h2>
-  </div>
-  <ul class="pubs">
-    <li><span class="tag">Paper</span><p>Z. Collins, J. Haddock, T. Headley, L. Wang. <em>Quantile Multiplicative Updates for Corruption-Robust Nonnegative Matrix Factorization.</em> SampTA 2025. <a href="https://doi.org/10.1109/SampTA62000.2025.11133532" target="_blank" rel="noopener">DOI</a></p></li>
-    <li><span class="tag">In prep</span><p><b>Z. Collins</b>, A. Glidden, S. Barat, S. Seager, S. Turyshev. <em>Global High-SNR High-Resolution Atmospheric Spectroscopy Capability With the Solar Gravitational Lens Telescope.</em></p></li>
-    <li><span class="tag">Poster</span><p><b>Z. Collins</b> et al. <em>Solar Gravitational Lens Telescope Extreme Spectroscopic Resolution.</em> AASTCS 11: Exoplanet Atmospheres, id. 600.138. Bulletin of the AAS, Vol. 58, No. 3, June 2026.</p></li>
-    <li><span class="tag">Talk</span><p>Z. Collins et al. <em>Exploring Modeling Methods Through Experimental Mathematics.</em> USD Fall Research Colloquium, Sep 2024.</p></li>
-  </ul>
-</section>
-
-<section id="skills">
-  <div class="sec-head">
-    <span class="label">Toolkit</span>
-    <h2>Skills</h2>
-  </div>
-  <div class="skills">
-    <div><span class="label">Programming &amp; software</span><p>Python (NumPy, SciPy, Astropy, Matplotlib, Pandas, ODEint), HITRAN HAPI, Jupyter, Igor Pro, LabVIEW, Unix, awk, LaTeX</p></div>
-    <div><span class="label">Modeling codes</span><p>petitRADTRANS, LavAtmos, FastChem</p></div>
-    <div><span class="label">Lab equipment</span><p>Lock-in amplifier, scanning grating spectrometer, photomultiplier tube, Michelson interferometer, photodiode and amplifier, oscilloscope, function generator, spectrum analyzer, pressure sensor, 1-meter telescope</p></div>
-    <div><span class="label">Methods</span><p>CCD reduction (bias, dark, flat), aperture photometry, plate solving, photometric calibration, spectroscopy, cross-correlation and log-likelihood analysis, numerical simulation, uncertainty analysis</p></div>
-  </div>
-  <p style="color: var(--muted); font-size: 0.95rem;">Teaching: physics and astrophysics lab TA and course grader at Harvey Mudd and Pomona Colleges, Jan 2025 – present.</p>
-</section>
-
-<footer>Zane Collins · Claremont, CA · Updated October 2026</footer>
-</div>
-
-<script>
-document.getElementById('copy-email').addEventListener('click', function () {
-  var btn = this, text = document.getElementById('email').textContent;
-  function done(msg) { btn.textContent = msg; setTimeout(function () { btn.textContent = 'Copy email'; }, 1600); }
-  function fallback() {
-    var r = document.createRange(); r.selectNodeContents(document.getElementById('email'));
-    var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); done('Selected');
-  }
-  try {
-    navigator.clipboard.writeText(text).then(function () { done('Copied'); }, fallback);
-  } catch (e) { fallback(); }
-});
-</script>
-
-</body>
+	</body>
 </html>

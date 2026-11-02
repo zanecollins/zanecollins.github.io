@@ -1,0 +1,126 @@
+/* Additions on top of Spectral (HTML5 UP) for Zane Collins's portfolio */
+
+/* Banner sub-line */
+#banner p.facts {
+	font-size: 0.8em;
+	letter-spacing: 0.15em;
+	margin-top: 1.5em;
+}
+
+/* Spotlight figures: show whole plots, never crop them */
+.spotlight .image.plot {
+	background: #ffffff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1.5em;
+}
+.spotlight .image.plot img {
+	object-fit: contain;
+	max-height: 100%;
+}
+.spotlight .content .meta {
+	font-size: 0.8em;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	opacity: 0.75;
+	margin-bottom: 0.5em;
+}
+
+/* Project and research entries on inner pages */
+.entry {
+	border-bottom: solid 2px rgba(0, 0, 0, 0.125);
+	margin-bottom: 3em;
+	padding-bottom: 1.5em;
+}
+.entry:last-child {
+	border-bottom: 0;
+	margin-bottom: 0;
+}
+.entry .meta {
+	color: #7f888f;
+	font-size: 0.8em;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	margin: -0.5em 0 1em 0;
+}
+.entry .result {
+	border-left: solid 3px #21b2a6;
+	padding-left: 1em;
+	font-weight: 600;
+	color: #2e3842;
+}
+.entry .tools {
+	font-size: 0.85em;
+	color: #7f888f;
+}
+.entry .note {
+	background: rgba(33, 178, 166, 0.1);
+	padding: 0.75em 1em;
+	border-radius: 4px;
+}
+.figure {
+	margin: 0 0 2em 0;
+}
+.figure .image.fit {
+	margin-bottom: 0.5em;
+}
+.figure .image.fit img {
+	border: solid 1px rgba(0, 0, 0, 0.125);
+}
+.figure p.caption {
+	color: #7f888f;
+	font-size: 0.8em;
+	line-height: 1.5;
+	margin: 0;
+}
+
+/* Publications list */
+ul.pubs {
+	list-style: none;
+	padding-left: 0;
+}
+ul.pubs li {
+	padding-left: 0;
+	margin-bottom: 1.25em;
+}
+ul.pubs .tag {
+	display: inline-block;
+	background: #21b2a6;
+	color: #ffffff;
+	font-size: 0.7em;
+	font-weight: 600;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	padding: 0 0.75em;
+	border-radius: 3px;
+	margin-right: 0.5em;
+}
+
+/* Page-section jump links on inner pages */
+ul.jump {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5em 1.5em;
+	font-size: 0.85em;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+ul.jump li {
+	padding: 0;
+}
+
+/* Feature tiles that link to a project */
+.features li a.more-link {
+	font-size: 0.8em;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+
+/* Keep figure aspect ratios (width/height attributes would otherwise stretch them) */
+.figure .image.fit img,
+.spotlight .image img {
+	height: auto;
+}

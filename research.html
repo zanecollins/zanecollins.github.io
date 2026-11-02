@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<!--
+	Spectral by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+	<head>
+		<title>Research | Zane Collins</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="Zane Collins: physics student at Harvey Mudd College. Research and hands-on projects in spectroscopy, instrumentation, and astronomical data analysis." />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/custom.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<div id="page-wrapper">
+
+			<header id="header">
+				<h1><a href="index.html">Zane Collins</a></h1>
+				<nav id="nav">
+					<ul>
+						<li class="special">
+							<a href="#menu" class="menuToggle"><span>Menu</span></a>
+							<div id="menu">
+								<ul>
+									<li><a href="index.html">Home</a></li>
+									<li><a href="research.html">Research</a></li>
+									<li><a href="projects.html">Projects</a></li>
+									<li><a href="research.html#publications">Publications</a></li>
+									<li><a href="projects.html#skills">Skills</a></li>
+									<li><a href="index.html#cta">Contact</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			</header>
+
+			<article id="main">
+				<header>
+					<h2>Research</h2>
+					<p>Exoplanet atmospheres, Venus, and applied math</p>
+				</header>
+				<section class="wrapper style5">
+					<div class="inner">
+
+						<ul class="jump">
+							<li><a href="#sgl">Solar Gravitational Lens</a></li>
+							<li><a href="#magma">Magma oceans</a></li>
+							<li><a href="#venus">Venus</a></li>
+							<li><a href="#nmf">Matrix factorization</a></li>
+							<li><a href="#star">USD STAR</a></li>
+							<li><a href="#publications">Publications</a></li>
+						</ul>
+
+						<section class="entry" id="sgl">
+							<h3>Solar Gravitational Lens biosignature spectroscopy</h3>
+							<p class="meta">MIT &middot; Research Assistant, Seager group &middot; May 2025 to present &middot; with A. Glidden, S. Barat, S. Turyshev</p>
+							<div class="row">
+								<div class="col-7 col-12-medium">
+									<ul>
+										<li>Built a Python spectroscopic modeling pipeline largely from first principles to model high-resolution transmission spectra of Earth-like exoplanets amplified by the Solar Gravitational Lens.</li>
+										<li>Learned the HITRAN API from scratch for high-resolution molecular line data, building from test scripts to full models, and used colorednoise to simulate noise in synthetic observations.</li>
+										<li>Quantified biosignature detectability limits as a function of spatial resolution, spectral resolution, and signal-to-noise, using cross-correlation and log-likelihood analysis.</li>
+									</ul>
+									<p>At JWST-like resolving power (R ~ 10&sup3;), overlapping features from different molecules blend together and make trace-gas biosignatures hard to identify. The SGL's photon amplification (~10&sup1;&sup1; at ~1 &mu;m) can instead be spent on spectroscopy, reaching R ~ 10&#8310;&ndash;10&#8311;, with practical limits set by the solar-corona background, the SGL point-spread function, and reconstruction losses.</p>
+									<p class="tools"><strong>Tools:</strong> Python, NumPy, SciPy, HITRAN HAPI, colorednoise</p>
+									<p class="note">First-author poster, AASTCS 11: Exoplanet Atmospheres (2026). First-author manuscript in preparation.</p>
+								</div>
+								<div class="col-5 col-12-medium">
+									<div class="figure">
+								<span class="image fit"><img src="img/aastcs-talk.jpg" alt="Zane Collins at a podium beside a projected slide titled Solar Gravitational Lens Extreme Spectral Resolution" loading="lazy" width="1024" height="583" /></span>
+								<p class="caption">Presenting the SGL work at AASTCS 11: Exoplanet Atmospheres (2026).</p>
+							</div>
+								</div>
+							</div>
+						</section>
+
+						<section class="entry" id="magma">
+							<h3>Magma oceans and exoplanet atmospheres</h3>
+							<p class="meta">MIT &middot; Research Assistant, Seager group &middot; May 2026 to present</p>
+							<ul>
+								<li>Coupling LavAtmos (melt&ndash;vapor chemistry), FastChem (gas-phase equilibrium chemistry), and petitRADTRANS (radiative transfer) to connect magma ocean interiors to observable atmospheric spectra.</li>
+								<li>Evaluating atmospheric tracers as diagnostics of exoplanet interiors.</li>
+							</ul>
+							<p class="tools"><strong>Tools:</strong> petitRADTRANS, LavAtmos, FastChem, Python</p>
+							<p class="note">Contributing author on a JWST Cycle 6 proposal for a young sub-Neptune.</p>
+						</section>
+
+						<section class="entry" id="venus">
+							<h3>Morning Star Missions to Venus</h3>
+							<p class="meta">MIT &middot; Research Assistant &middot; Jan 2025 to Aug 2026 &middot; advisors J. Petkowski, S. Seager</p>
+							<ul>
+								<li>Designed a UV phase-modulation experiment, using a lock-in amplifier, to test the feasibility of in-situ photonic measurement of the Venusian atmosphere.</li>
+								<li>Spectroscopically characterized molecules and curated a spectral library of 10 molecule classes relevant to Venus's atmosphere and to the search for organic compounds.</li>
+								<li>Presented findings to collaborators at the University of Bern and mentored two high school students on the spectral library.</li>
+							</ul>
+						</section>
+
+						<section class="entry" id="nmf">
+							<h3>Corruption-robust non-negative matrix factorization</h3>
+							<p class="meta">Harvey Mudd College &middot; Undergraduate Research Assistant &middot; Aug to Dec 2024 &middot; advisor J. Haddock</p>
+							<ul>
+								<li>Developed quantile-based multiplicative update rules for NMF that resist sparse corruption, working with two other undergraduates on the algorithm, simulations, and paper.</li>
+								<li>Analyzed convergence behavior under sparse noise.</li>
+							</ul>
+							<p class="note">Peer-reviewed conference paper, SampTA 2025.</p>
+						</section>
+
+						<section class="entry" id="star">
+							<h3>STAR program: modeling with experimental mathematics</h3>
+							<p class="meta">University of San Diego &middot; Undergraduate Student Researcher &middot; Jun to Aug 2024 &middot; advisor J. Friedman</p>
+							<ul>
+								<li>Used differential evolution to fit piecewise model functions to data, with confidence and uncertainty estimates.</li>
+								<li>Presented at the USD Fall Research Colloquium (Sep 2024).</li>
+							</ul>
+						</section>
+
+						<section id="publications">
+							<h3>Publications and presentations</h3>
+							<ul class="pubs">
+								<li><span class="tag">Paper</span>Z. Collins, J. Haddock, T. Headley, L. Wang. <em>Quantile Multiplicative Updates for Corruption-Robust Nonnegative Matrix Factorization.</em> SampTA 2025. <a href="https://doi.org/10.1109/SampTA62000.2025.11133532">DOI</a></li>
+								<li><span class="tag">In prep</span><strong>Z. Collins</strong>, A. Glidden, S. Barat, S. Seager, S. Turyshev. <em>Global High-SNR High-Resolution Atmospheric Spectroscopy Capability With the Solar Gravitational Lens Telescope.</em></li>
+								<li><span class="tag">Poster</span><strong>Z. Collins</strong> et al. <em>Solar Gravitational Lens Telescope Extreme Spectroscopic Resolution.</em> AASTCS 11: Exoplanet Atmospheres, id. 600.138. Bulletin of the AAS, Vol. 58, No. 3, June 2026.</li>
+								<li><span class="tag">Talk</span>Z. Collins et al. <em>Exploring Modeling Methods Through Experimental Mathematics.</em> USD Fall Research Colloquium, Sep 2024.</li>
+							</ul>
+						</section>
+
+					</div>
+				</section>
+			</article>
+
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="mailto:zacollins@g.hmc.edu" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					<li><a href="https://www.linkedin.com/in/zanebcollins" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://github.com/zanecollins" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Zane Collins</li>
+					<li>Updated November 2026</li>
+					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</footer>
+
+		</div>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
