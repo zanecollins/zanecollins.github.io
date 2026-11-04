@@ -94,9 +94,11 @@
 							<div class="row">
 								<div class="col-6 col-12-medium">
 									<ul>
-										<li>Built and aligned a Michelson-interferometer FTS to resolve the sodium doublet.</li>
+										<li>Aligned a Michelson-interferometer FTS to resolve the sodium doublet.</li>
 										<li>Fit 5 trials &times; 7 visibility minima in Python (SciPy) with a linear model and rejected a &gt;4&sigma; outlier traced to micrometer backlash.</li>
-										<li>Measured fringe visibility of the 546 nm mercury line with a photodiode, amplifier, and electrical filter to suppress 120 Hz lamp flicker, and diagnosed a drop in signal-to-noise between sessions by testing the photodiode and adjusting the detector aperture.</li>
+										<li>Measured fringe visibility of the pressure-broadened 546 nm mercury line with a photodiode, amplifier, and electrical filter to suppress 120 Hz lamp flicker.</li>
+										<li>When the first mercury session was too noisy to show a trend, enlarged the photodiode aperture to lift the signal above the background, which gave a usable trial in the next session.</li>
+										<li>When the signal later fell from about 40 mV to 19 mV above background, tested the photodiode against the room lights and saw only an 11 mV response, pointing to a detector problem. Catching it kept the compromised session out of the analysis, so the mercury result rests on the clean trial instead of bad data.</li>
 									</ul>
 									<p class="result">Na doublet spacing 0.593 &plusmn; 0.0004 nm, 1.2% from literature<br />Fit: reduced &chi;&sup2; = 1.69, PTE = 0.13</p>
 								</div>
