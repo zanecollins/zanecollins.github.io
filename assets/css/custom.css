@@ -132,3 +132,53 @@ body.is-mobile.landing #banner,
 body.is-mobile.landing .wrapper.style4 {
 	background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images-assets.nasa.gov/image/PIA21751/PIA21751~orig.jpg");
 }
+
+/* About page */
+.about-intro {
+	display: flex;
+	gap: 2.5em;
+	align-items: center;
+	margin-bottom: 3em;
+}
+.about-intro .headshot {
+	flex: 0 0 220px;
+	margin: 0;
+}
+.about-intro .headshot img {
+	width: 220px;
+	height: 220px;
+	border-radius: 50%;
+	object-fit: cover;
+	display: block;
+}
+.hobbies {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 1.5em;
+	margin-bottom: 2em;
+}
+.hobbies h4 { margin-bottom: 0.25em; }
+.hobbies p { font-size: 0.9em; margin: 0; }
+.gallery {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1em;
+}
+.gallery figure { margin: 0; }
+.gallery img {
+	width: 100%;
+	aspect-ratio: 1 / 1;
+	object-fit: cover;
+	display: block;
+	border-radius: 4px;
+}
+.gallery figcaption {
+	color: #7f888f;
+	font-size: 0.8em;
+	margin-top: 0.4em;
+}
+@media screen and (max-width: 736px) {
+	.about-intro { flex-direction: column; text-align: center; }
+	.hobbies { grid-template-columns: repeat(2, 1fr); }
+	.gallery { grid-template-columns: repeat(2, 1fr); }
+}
