@@ -196,9 +196,11 @@
 							<div class="row">
 								<div class="col-6 col-12-medium">
 									<ul>
-										<li>Built a ~150,000-source catalog from archival HST/ACS images (MAST) with DAOStarFinder, and cut crowded sources with radial and background-flux filters.</li>
-										<li>Ran aperture photometry with zero-point, aperture (encircled-energy), and extinction corrections, then median-binned the color&ndash;magnitude diagram.</li>
-										<li>Fit Dartmouth isochrones and shifted the main sequence to estimate the cluster's distance.</li>
+										<li>Detected ~150,000 sources in archival HST/ACS images (MAST) with DAOStarFinder, tuning the threshold and checking extractions in DS9 so the catalog reached the faint main-sequence stars that isochrone fitting depends on, without admitting noise.</li>
+										<li>Cut sources within 2&prime; of the cluster core, where stars blend together and photometry can't be trusted, then removed the remaining crowded sources with a background-flux threshold, since a bright annulus signals a neighboring star. Both cuts narrowed the main sequence.</li>
+										<li>Chose a 0.288&Prime; aperture by comparing color&ndash;magnitude diagrams across aperture sizes and keeping the one with the tightest main sequence, then applied zero-point, encircled-energy aperture, and dust-extinction corrections to recover true magnitudes.</li>
+										<li>Binned stars by magnitude and took the median color in each bin to reduce scatter, which tightened the main sequence and turnoff enough to fit isochrones with confidence.</li>
+										<li>Shifted the main sequence onto Dartmouth isochrones and converted the shift (distance modulus 15.5) to a distance with propagated uncertainty.</li>
 									</ul>
 									<p class="result">Distance 12.6 &plusmn; 0.6 kpc</p>
 									<p class="tools"><strong>Tools:</strong> Python, Astropy, photutils, DS9</p>
